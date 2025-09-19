@@ -182,7 +182,7 @@ function listaAlunos() {
     // d) Adicionar um aluno preenchendo id, nome, sobrenome, notas
     let aluno6 = {
         id: crypto.randomUUID(),
-        nome: "Francisco",
+        nome: "Ana",
         sobrenome: "Sens",
         notas: {
             nota1: 8,
@@ -204,8 +204,19 @@ function listaAlunos() {
     .map(aluno => aluno.id + " " + aluno.turma);
     // console.log(listaAlunosTurma07);
 
-
     // g) Criar uma lista filtrando por alunos com nome menor que 10
+    const listaAlunos10 = alunos.filter(aluno10 => {
+        let diferença = "aaaaaaaaaa";
+        let nomeCompleto = aluno10.nome + " " +  aluno10.sobrenome;
+        
+        if (nomeCompleto.length < diferença.length) {
+            return true;
+        } else {
+            return false;
+        };
+    })
+    .map(aluno10 => aluno10.nome + " " + aluno10.sobrenome);
+    // console.log(listaAlunos10);
 }
 
 
